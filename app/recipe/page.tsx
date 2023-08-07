@@ -41,7 +41,7 @@ export default function Home() {
 
             <div>
                 <div>
-                    <span className='text-xl'>Okro soup</span> <span>also known as Okra soup, is a delicious soup that's widely enjoyed in many West African countries, especially Nigeria. It's made with okra vegetables cooked with a unique blend of palm oil, meat (like goat meat, beef, or fish), and various spices.</span>
+                    <span className='text-xl'>Okro soup</span> <span>also known as Okra soup, is a delicious soup that&apos;s widely enjoyed in many West African countries, especially Nigeria. It&apos;s made with okra vegetables cooked with a unique blend of palm oil, meat (like goat meat, beef, or fish), and various spices.</span>
                 </div>
                 <div className='block md:hidden'>
 

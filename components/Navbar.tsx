@@ -244,27 +244,28 @@ const NAV_ITEMS: Array<NavItem> = [
     },
     {
         label: 'ABOUT',
+        href:'/about'
     },
-    {
-        label: 'EXPLORE',
-        children: [
-            {
-                label: 'Trending Recipes',
-                subLabel: 'Recipes people like to make',
-                href: '#',
-            },
-            {
-                label: 'Beginner frienly recipes',
-                subLabel: 'Recipes anyone can make',
-                href: '#',
-            },
-            {
-                label: 'Where to buy stuff',
-                subLabel: 'Find ingredients near you',
-                href: '#',
-            },
-        ],
-    },
+    // {
+    //     label: 'EXPLORE',
+    //     children: [
+    //         {
+    //             label: 'Trending Recipes',
+    //             subLabel: 'Recipes people like to make',
+    //             href: '#',
+    //         },
+    //         {
+    //             label: 'Beginner frienly recipes',
+    //             subLabel: 'Recipes anyone can make',
+    //             href: '#',
+    //         },
+    //         {
+    //             label: 'Where to buy stuff',
+    //             subLabel: 'Find ingredients near you',
+    //             href: '#',
+    //         },
+    //     ],
+    // },
 
     {
         label: 'RECIPE INDEX',
@@ -272,12 +273,12 @@ const NAV_ITEMS: Array<NavItem> = [
     },
 
 
-    {
-        label: 'HACKS',
-        href: '#',
-    },
-    {
-        label: 'GLOSSARY',
-        href: '#',
-    },
+    // {
+    //     label: 'HACKS',
+    //     href: '#',
+    // },
+    // {
+    //     label: 'GLOSSARY',
+    //     href: '#',
+    // },
 ]

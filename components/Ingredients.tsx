@@ -23,7 +23,7 @@ export default function Ingredients() {
     return (
         <div>
 
-            <div className="flex justify-end"><SecondaryOptions></SecondaryOptions></div>
+            <div className="flex justify-start"><SecondaryOptions></SecondaryOptions></div>
             <CheckboxGroup colorScheme='blue'>
                 <Stack direction={['column']}>
 

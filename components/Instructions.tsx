@@ -1,4 +1,5 @@
 import {
+    Image,
     Step,
     StepDescription,
     StepIcon,
@@ -61,26 +62,35 @@ export default function Instructions() {
     })
 
     return (
-        <Stepper index={activeStep} orientation='vertical' gap='0' ms={1}>
-            {steps.map((step, index) => (
-                <Step style={{width:"100%"}} key={index}>
-                    <StepIndicator>
-                        <StepStatus
-                            complete={<StepIcon />}
-                            incomplete={<StepNumber />}
-                            active={<StepNumber />}
-                        />
-                    </StepIndicator>
+        <div>
+            <div className='flex w-full h-[200px} z-10 sticky top-1 bg-white justify-center mt-1' >
+                <Image boxSize='200px' src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
+            </div>
 
-                    <Box style={{width:"90%"}}>
-                        <StepTitle>{step.title}</StepTitle>
-                        <WrapItem style={{width:"100%"}}><StepDescription>{step.description}</StepDescription> </WrapItem>
-                    </Box>
 
-                    <StepSeparator />
-                </Step>
-            ))}
-        </Stepper>
+
+            <Stepper index={activeStep} orientation='vertical' gap='0' ms={1}>
+                {steps.map((step, index) => (
+                    <Step style={{ width: "100%" }} key={index}>
+                        <StepIndicator>
+                            <StepStatus
+                                complete={<StepIcon />}
+                                incomplete={<StepNumber />}
+                                active={<StepNumber />}
+                            />
+                        </StepIndicator>
+
+                        <Box style={{ width: "90%" }}>
+                            <StepTitle>{step.title}</StepTitle>
+                            <WrapItem style={{ width: "100%" }}><StepDescription>{step.description}</StepDescription> </WrapItem>
+                        </Box>
+
+                        <StepSeparator />
+                    </Step>
+                ))}
+            </Stepper>
+        </div>
+
     )
 
 }

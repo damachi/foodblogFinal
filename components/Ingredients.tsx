@@ -1,5 +1,7 @@
 
-import { Checkbox, CheckboxGroup, Stack} from '@chakra-ui/react'
+import { Checkbox, CheckboxGroup, Stack } from '@chakra-ui/react'
+
+import SecondaryOptions from './SecondaryOptionsWithMenu';
 
 
 export default function Ingredients() {
@@ -17,20 +19,25 @@ export default function Ingredients() {
         { name: 'Salt', quantity: 'to taste' },
         { name: 'Ugu or Spinach leaves', quantity: 'a handful' }
     ];
-    
+
     return (
-        <CheckboxGroup colorScheme='blue'>
-        <Stack direction={['column']}>
-        
-        <span className='text-xl'>Ingredients</span>
+        <div>
 
-        {ingredients.map(ingredient=> (
-            <Checkbox key={ingredient.name} value={ingredient.name + " " + ingredient.quantity}>
-                {ingredient.name + " " + ingredient.quantity}
-            </Checkbox>
-        ))}
+            <div className="flex justify-end"><SecondaryOptions></SecondaryOptions></div>
+            <CheckboxGroup colorScheme='blue'>
+                <Stack direction={['column']}>
 
-        </Stack>
-      </CheckboxGroup>
+                    <span className='text-xl'>Ingredients</span>
+
+                    {ingredients.map(ingredient => (
+                        <Checkbox key={ingredient.name} value={ingredient.name + " " + ingredient.quantity}>
+                            {ingredient.name + " " + ingredient.quantity}
+                        </Checkbox>
+                    ))}
+
+                </Stack>
+            </CheckboxGroup>
+        </div>
+
     )
 }

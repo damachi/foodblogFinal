@@ -74,18 +74,6 @@ export default function Home() {
 
                 </div>
                 <div className="hidden md:flex flex-col w-full h-screen">
-
-                    {/* <div className="flex h-80 w-full justify-center items-center mb-1">
-                        <div className='flex flex-col h-full w-80 border border-black rounded'>
-
-                            <Image boxSize='200px' src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-
-                            <div className='w-100 h-42'></div>
-
-
-
-                        </div>
-                    </div> */}
                     <div className="flex h-full w-full space-x-1">
                         <div className="h-full w-1/2 border border-black rounded overflow-auto p-1">
 
@@ -94,9 +82,6 @@ export default function Home() {
                         </div>
 
                         <div className="flex flex-col h-full w-1/2 border items-center border-black rounded overflow-auto">
-                            <div className='flex w-full h-[200px} z-10 sticky top-1 bg-white justify-center mt-1' >
-                                <Image boxSize='200px' src='https://bit.ly/dan-abramov' alt='Dan Abramov'/>
-                            </div>
 
                             <Instructions></Instructions>
                         </div>

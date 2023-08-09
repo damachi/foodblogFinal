@@ -21,6 +21,8 @@ export default function Ingredients() {
     return (
         <CheckboxGroup colorScheme='blue'>
         <Stack direction={['column']}>
+        
+        <span className='text-xl'>Ingredients</span>
 
         {ingredients.map(ingredient=> (
             <Checkbox key={ingredient.name} value={ingredient.name + " " + ingredient.quantity}>

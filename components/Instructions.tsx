@@ -61,7 +61,7 @@ export default function Instructions() {
     })
 
     return (
-        <Stepper index={activeStep} orientation='vertical' gap='0'>
+        <Stepper index={activeStep} orientation='vertical' gap='0' ms={1}>
             {steps.map((step, index) => (
                 <Step style={{width:"100%"}} key={index}>
                     <StepIndicator>

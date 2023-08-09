@@ -2,17 +2,13 @@
 
 export default function Home() {
   return (
-    <div className="bg-red-700 w-full h-screen
-  ps-5 pe-5 pt-5">
-      <div className="bg-slate-400 w-full h-80">
-        fadsfsa
+    <div className="h-screen flex flex-col bg-red-700">
+      <div className="h-2/3 bg-slate-950">
+        {/* Content */}
       </div>
-
-      <div>
-        <h1>RECIPES OF COUNTRY</h1>
-
+      <div className="h-1/3 bg-yellow-300">
+        {/* Content */}
       </div>
-
     </div>
   )
 }

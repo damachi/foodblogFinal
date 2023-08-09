@@ -34,7 +34,7 @@ const WorldMap = ({ data }) => {
 
   const renderMap = (svg, width, height) => {
     // Calculate dynamic scale based on SVG dimensions.
-    const scaleFactor = 0.32;  // Adjust this for desired default scaling
+    const scaleFactor = 1;  // Adjust this for desired default scaling
     const scale = (width / 2.5) * scaleFactor;  // 2.5 is an arbitrary factor for adjusting initial scale
 
     const projection = d3.geoEquirectangular()

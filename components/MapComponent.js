@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+import geoAzimuthalEqualArea from 'd3-geo-projection'
 
 const WorldMap = ({ data }) => {
   const ref = useRef(); // Reference to the SVG element
@@ -37,8 +38,10 @@ const WorldMap = ({ data }) => {
     const scaleFactor = 1;  // Adjust this for desired default scaling
     const scale = (width / 2.5) * scaleFactor;  // 2.5 is an arbitrary factor for adjusting initial scale
 
-    const projection = d3.geoEquirectangular()
-      .scale(scale)
+    // const projection = d3.geoCylindricalStereographic()
+    
+      // .scale(scale)
+      const projection = d3.geoAzimuthalEqualArea()
       .translate([width / 2, height / 2]);
 
     svg.selectAll("*").remove();

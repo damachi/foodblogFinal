@@ -10,7 +10,7 @@ const WorldMap = ({ data }) => {
     const svg = d3.select(ref.current);
 
     const zoom = d3.zoom()
-      .scaleExtent([1, 8])
+      // .scaleExtent([1, 8])
       .on('zoom', zoomed);
 
     svg.call(zoom);

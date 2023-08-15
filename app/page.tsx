@@ -1,4 +1,5 @@
 import WorldMap from '@/components/MapComponent';
+import RecipeCard from '@/components/RecipeCard';
 
 // import MapComponent from '@/components/MapComponent';
 export default async function Home() {
@@ -7,12 +8,23 @@ export default async function Home() {
 
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-full flex flex-col">
       <div className="h-2/3">
         <WorldMap data={data}></WorldMap>
       </div>
-      <div className="h-1/3 bg-yellow-300">
-        {/* Content */}
+      <div className="flex flex-col h-1/3 ps-1 pt-2 w-full bg-orange-200 justify-between">
+        <div className='text-base
+        '>Top Trending Nigeran Recipes</div>
+        <div className="flex mt-2 flex-1 space-x-4 w-full overflow-auto">
+          <RecipeCard></RecipeCard>
+          <RecipeCard></RecipeCard>
+          <RecipeCard></RecipeCard>
+          <RecipeCard></RecipeCard>
+
+
+        </div>
+        <div className='bg-yellow-800 flex justify-end'> <a href='#'>View all Recipes</a></div>
+
       </div>
     </div>
   )

@@ -9,16 +9,16 @@ const WorldMap = ({ data }) => {
   useEffect(() => {
     const svg = d3.select(ref.current);
 
-    const zoom = d3.zoom()
-      // .scaleExtent([1, 8])
-      .on('zoom', zoomed);
+    // const zoom = d3.zoom()
+    //   .scaleExtent([1, 8])
+    //   // .on('zoom', zoomed);
 
-    svg.call(zoom);
+    // // svg.call(zoom);
 
-    function zoomed(event) {
-      const { transform } = event;
-      svg.select('g').attr('transform', transform);
-    }
+    // function zoomed(event) {
+    //   const { transform } = event;
+    //   svg.select('g').attr('transform', transform);
+    // }
 
     const handleResize = () => {
       const width = svg.node().getBoundingClientRect().width;
@@ -84,17 +84,17 @@ const getScaleFactor = (width, minWidth, maxWidth) => {
 
   if(width >= 1440){
 
-    return 8.5
+    return 13.5
   }else if(width >= 1024){
-    return 8.3
+    return 11.3
   }else if(width >= 768){
-    return 5.4
+    return 8.2
   }else if(width >= 425){
-    return 3.0
+    return 5.5
   }else if(width >= 375){
-    return 2.6
+    return 4.8
   }else if(width >= 320){
-    return 2.3
+    return 3.3
   }else{
     return 1.0
   }

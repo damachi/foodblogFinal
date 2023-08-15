@@ -14,7 +14,7 @@ export default function RootLayout({
       <body>
 
         <ChakraProvider>
-          <Box display="flex" flexDirection="column">
+          <Box display="flex" flexDirection="column" style={{height:"100vh"}}>
             <NavBar></NavBar>
             {children}
             <Footer></Footer>

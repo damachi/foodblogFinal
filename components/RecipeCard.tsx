@@ -8,7 +8,7 @@ import { BiSolidTimer } from 'react-icons/bi'
 export default function RecipeCard() {
   return (
 
-    <div className='flex w-[200px] h-full bg-white flex-shrink-0 md:w-[240px] lg:w-[360px] border border-solid rounded-md'>
+    <div className='flex w-[255px] h-full bg-white flex-shrink-0 md:w-[240px] lg:w-[360px] border border-solid rounded-sm'>
       <div>
 
         <Image
@@ -32,8 +32,8 @@ export default function RecipeCard() {
         <Divider />
         <div className='text-xs'>
           <div><Icon as={GiLevelEndFlag} />Beginner</div>
-          <div><Icon as={BiSolidTimer} />Prep: 20min</div>
-          <div><Icon as={BiSolidTimer} />Cook: 30min</div>
+          <div><Icon as={BiSolidTimer} />Prep: 20m</div>
+          <div><Icon as={BiSolidTimer} />Cook: 30m</div>
 
         </div>
       </div>

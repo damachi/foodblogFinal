@@ -5,15 +5,16 @@ import { GiLevelEndFlag } from 'react-icons/gi'
 import { BiSolidTimer } from 'react-icons/bi'
 
 
+
 export default function RecipeCard() {
   return (
 
-    <div className='flex flex-col w-[255px] h-full bg-white flex-shrink-0 md:w-[240px] lg:w-[360px] border border-solid rounded-sm'>
+    <div className='flex flex-col w-[255px] h-full bg-white flex-shrink-0 border border-solid rounded-sm'>
 
 
       <div className='w-full h-full flex flex-col justify-center'>
         <div className='text-base font-bold'>
-          Jollof Rice
+          Jollof Rices
         </div>
 
         <div className='flex-grow overflow-auto'>
@@ -32,7 +33,9 @@ export default function RecipeCard() {
         <Divider />
         <div className='text-xs flex justify-between h-11 items-center ps-1 pe-1'>
           <div><Icon as={GiLevelEndFlag} />Beginner</div>
+          <Divider orientation='vertical' />
           <div><Icon as={BiSolidTimer} />Prep:20min</div>
+          <Divider orientation='vertical' />
           <div><Icon as={BiSolidTimer} />Cook:30min</div>
 
         </div>

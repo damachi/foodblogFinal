@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Continent {
+  id       Int      @id @default(autoincrement())
+  name     String   @unique
+  regions  Region[]
+}
+
+
+model Region {
+  id          Int       @id @default(autoincrement())
+  name        String
+  continentId Int
+  continent   Continent @relation(fields: [continentId], references: [id])
+  recipes     Recipe[]
+}
+
+model Recipe {
+  id           Int                  @id @default(autoincrement())
+  name         String               @unique
+  description  String?
+  cookTime     String               // Cook time (e.g., "30 minutes")
+  prepTime     String               // Preparation time (e.g., "15 minutes")
+  difficulty   String           // Difficulty level
+  ingredients  RecipeIngredient[]
+  regionId     Int
+  region       Region @relation(fields: [regionId], references: [id])
+  steps        RecipeStep[]
+}
+
+model RecipeStep {
+  id          Int     @id @default(autoincrement())
+  description String
+  stepNumber  Int
+  duration    String  // Approximate time this step takes, e.g., "5 minutes"
+  recipeId    Int
+  recipe      Recipe  @relation(fields: [recipeId], references: [id])
+}
+
+
+
+
+
+model Ingredient {
+  id          Int               @id @default(autoincrement())
+  name        String            @unique
+  description String?
+  type        String?           // This could be "vegetable", "spice", "protein", etc.
+  recipes     RecipeIngredient[] // Represents the many-to-many relation with Recipe through the junction table
+}
+model RecipeIngredient {
+  recipeId      Int      @id  // Foreign key referencing the Recipe model
+  ingredientId  Int      // Foreign key referencing the Ingredient model
+  quantity      String   // Describes the amount needed for the ingredient (e.g., "2 cups", "1 tsp", "100g")
+  Recipe        Recipe   @relation(fields: [recipeId], references: [id])
+  Ingredient    Ingredient @relation(fields: [ingredientId], references: [id])
+}
+

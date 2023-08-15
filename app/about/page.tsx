@@ -9,7 +9,7 @@ export default function AboutMe() {
 
     return (
         <div className='w-full bg-backgroundimage bg-no-repeat bg-cover bg-center flex justify-center items-center p-2'>
-            <div className='w-2/3  bg-white rounded-lg bg-opacity-70 text-black p-4 overflow-auto text-cen'>
+            <div className='w-72 md:w-2/3  bg-white rounded-lg bg-opacity-70 text-black p-4 overflow-auto text-cen'>
 
 
                 <span className='text-2xl'>👋 Hi there!</span> <br></br>

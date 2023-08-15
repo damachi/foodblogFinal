@@ -267,10 +267,10 @@ const NAV_ITEMS: Array<NavItem> = [
     //     ],
     // },
 
-    {
-        label: 'RECIPE INDEX',
-        href: '/recipe',
-    },
+    // {
+    //     label: 'RECIPE INDEX',
+    //     href: '/recipe',
+    // },
 
 
     // {

@@ -3,6 +3,7 @@ import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Text, Button, Hea
 import { Icon } from '@chakra-ui/react'
 import { GiLevelEndFlag } from 'react-icons/gi'
 import { BiSolidTimer } from 'react-icons/bi'
+import Link from 'next/link'
 
 
 
@@ -11,8 +12,9 @@ export default function RecipeCard() {
 
     <div className='flex flex-col w-[255px] h-full bg-white flex-shrink-0 border border-solid rounded-sm'>
 
+    <Link href={`/recipe/`}>
 
-      <div className='w-full h-full flex flex-col justify-center'>
+      <div className='w-full h-full flex flex-col justify-center cursor-pointer'>
         <div className='text-base font-bold'>
           Jollof Rices
         </div>
@@ -40,6 +42,7 @@ export default function RecipeCard() {
 
         </div>
       </div>
+      </Link>
     </div>
   )
 }
